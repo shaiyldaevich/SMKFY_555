@@ -1,0 +1,77 @@
+$purple_color: #7b53f5d9;
+
+.LookForTracks {
+	.content {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.search_icon_block {
+			position: absolute;
+			left: 9px;
+			top: 50%;
+			transform: translateY(-50%);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			button {
+				svg {
+					width: 24px;
+					height: 24px;
+					color: #b3b3b3;
+				}
+			}
+			@media (max-width: 308px) {
+				display: none;
+			}
+		}
+		.search_input_block {
+			input {
+				width: 100%;
+				padding: 0.85rem 2.7rem;
+				background: #111111;
+				border: 0;
+				outline: 2px solid transparent;
+				border-radius: 4px;
+				font-size: 0.875rem;
+				font-weight: 500;
+				color: #99a3c0;
+				transition: 0.25s;
+				&:focus {
+					box-shadow: $purple_color 0 0 0 1px inset;
+				}
+				@media (max-width: 400px) {
+					width: 200px;
+				}
+				@media (max-width: 350px) {
+					width: 160px;
+				}
+				@media (max-width: 308px) {
+					width: 120px;
+				}
+				@media (max-width: 276px) {
+					width: 100px;
+				}
+			}
+		}
+		.search_reset_block {
+			position: absolute;
+			right: 9px;
+			top: 50%;
+			transform: translateY(-50%);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			button {
+				svg {
+					width: 24px;
+					height: 24px;
+					color: #b3b3b3;
+				}
+			}
+			@media (max-width: 308px) {
+				display: none;
+			}
+		}
+	}
+}

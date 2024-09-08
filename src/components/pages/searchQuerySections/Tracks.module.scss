@@ -1,0 +1,72 @@
+.Tracks {
+	width: 100%;
+	padding: 20px;
+	background-color: #121212; // Общий темный фон, как у Spotify
+	color: #ffffff;
+  
+	
+  
+	.content {
+	  display: flex;
+	  flex-direction: column;
+	  gap: 20px;
+  
+	  .tracks {
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+  
+		.track {
+		  display: flex;
+		  align-items: center;
+		  padding: 10px;
+		  background-color: #181818;
+		  border-radius: 8px;
+		  cursor: pointer;
+		  transition: background-color 0.3s ease;
+  
+		  &:hover {
+			background-color: #282828; // Hover эффект, более светлый темный
+		  }
+  
+		  img {
+			width: 60px;
+			height: 60px;
+			border-radius: 4px;
+			margin-right: 15px;
+		  }
+  
+		  h5 {
+			font-size: 16px;
+			font-weight: 500;
+			color: #ffffff;
+			margin: 0;
+		  }
+  
+		  &.active {
+			background-color: #1db954; // Цвет для активного трека (зеленый, как у Spotify)
+			h5 {
+			  color: #fff;
+			}
+		  }
+		}
+	  }
+	}
+  
+	// Адаптив для мобильных устройств
+	@media (max-width: 768px) {
+	  padding: 10px;
+  
+	  .track {
+		flex-direction: column;
+		align-items: flex-start;
+		img {
+		  margin-bottom: 10px;
+		}
+		h5 {
+		  font-size: 14px;
+		}
+	  }
+	}
+  }
+  

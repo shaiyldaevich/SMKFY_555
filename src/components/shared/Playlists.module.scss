@@ -1,0 +1,152 @@
+.Playlistst {
+	display: flex;
+	padding: 10px;
+	background-color: #1e1e1ec4;
+	border-radius: 10px;
+	width: 25%;
+	height: 80vh;
+
+	.content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 20px;
+
+		.top {
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+
+			a {
+				text-decoration: none;
+				color: gray;
+				display: flex;
+				align-items: center;
+				gap: 5px;
+
+				span {
+					font-size: 14px;
+					font-weight: bold;
+				}
+			}
+		}
+
+		.Lists {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+
+			.List {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+
+				h2 {
+					font-size: 16px;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 1120px) {
+		width: 20%;
+	}
+
+	@media (max-width: 900px) {
+		width: 20%;
+		height: auto;
+
+		.content {
+			.top {
+				justify-content: center;
+
+				a {
+					span {
+						font-size: 12px;
+					}
+				}
+			}
+
+			.Lists {
+				.List {
+					h2 {
+						font-size: 14px;
+					}
+				}
+			}
+		}
+	}
+
+	// Адаптив для устройств с шириной до 768px
+	@media (max-width: 768px) {
+		.content {
+			.top {
+				a {
+					span {
+						font-size: 10px;
+					}
+				}
+			}
+
+			.Lists {
+				.List {
+					h2 {
+						font-size: 12px;
+					}
+				}
+			}
+		}
+	}
+
+	// Адаптив для устройств с шириной до 480px
+	@media (max-width: 480px) {
+		padding: 5px;
+		.content {
+			gap: 10px;
+
+			.top {
+				a {
+					span {
+						font-size: 10px;
+					}
+				}
+			}
+
+			.Lists {
+				.List {
+					h2 {
+						font-size: 10px;
+					}
+
+					img {
+						width: 40px;
+						height: 40px;
+					}
+				}
+			}
+		}
+	}
+
+	// Адаптив для устройств с шириной до 300px
+	@media (max-width: 300px) {
+		padding: 5px;
+
+		.content {
+			gap: 5px;
+
+			.Lists {
+				.List {
+					h2 {
+						font-size: 8px;
+					}
+
+					img {
+						width: 30px;
+						height: 30px;
+					}
+				}
+			}
+		}
+	}
+}

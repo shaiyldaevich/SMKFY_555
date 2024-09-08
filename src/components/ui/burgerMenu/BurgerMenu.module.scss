@@ -1,0 +1,220 @@
+$spotify-green: #1db954;
+$spotify-black: #191414;
+$bg: #ffffff;
+$white-color: #ffffff;
+$black-color: $spotify-black;
+$lightest-slate: #d9dadc;
+$navy-shadow: rgba(255, 255, 255, 0.7);
+$black: $spotify-black;
+$border-radius: 8px;
+$transition: 0.3s ease;
+.BurgerMenu {
+	position: absolute;
+	top: 65px;
+	right: 0px;
+	opacity: 0;
+	visibility: hidden;
+	transition: $transition;
+	padding: 15px;
+	background: $bg;
+	box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+	border-radius: $border-radius;
+
+	&.active {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	.content {
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+
+		.user_profile {
+			display: flex;
+			gap: 10px;
+			align-items: center;
+
+			.user_data {
+				.user_name {
+					font-size: clamp(16px, 4vw, 10px);
+					font-weight: 500;
+					color: $black;
+				}
+				.user_email {
+					font-size: clamp(14px, 4vw, 8px);
+					color: $black-color;
+				}
+			}
+		}
+
+		.auth_login_buttons {
+			.sign_in_button {
+				padding: 7px 14px;
+				display: block;
+				border: 1px solid $black;
+				border-radius: $border-radius;
+				color: $black;
+				transition: $transition;
+
+				&:hover {
+					background-color: $lightest-slate;
+				}
+			}
+		}
+
+		.nav {
+			ul {
+				li {
+					.link {
+						padding: 7px 14px;
+						display: block;
+						border-radius: $border-radius;
+						color: $black;
+						transition: $transition;
+
+						&:hover {
+							background-color: $lightest-slate;
+						}
+
+						&.active {
+							background-color: $black;
+							color: $white-color;
+						}
+					}
+				}
+			}
+		}
+
+		.auth_logout_buttons {
+			.logout_button {
+				padding: 7px 14px;
+				width: 100%;
+				background: transparent;
+				border: none;
+				outline: none;
+				display: flex;
+				gap: 7px;
+				justify-content: flex-start;
+				align-items: center;
+				border-radius: $border-radius;
+				font-size: clamp(14px, 4vw, 8px);
+				font-weight: 500;
+				color: #ff5f54;
+				transition: $transition;
+
+				&:hover {
+					background: #ff5f54;
+					color: $white-color;
+				}
+			}
+		}
+	}
+
+	
+	@media (max-width: 900px) {
+		width: 300px;
+		top: 60px;
+		right: 10px;
+	}
+
+	@media (max-width: 768px) {
+		width: 250px;
+		top: 55px;
+		right: 5px;
+
+		.content {
+			gap: 10px;
+
+			.user_profile {
+				.user_data {
+					.user_name {
+						font-size: clamp(14px, 4vw, 9px);
+					}
+					.user_email {
+						font-size: clamp(12px, 4vw, 7px);
+					}
+				}
+			}
+
+			.auth_logout_buttons {
+				.logout_button {
+					font-size: clamp(12px, 4vw, 7px);
+				}
+			}
+		}
+	}
+
+	@media (max-width: 480px) {
+		width: 200px;
+		top: 50px;
+		right: 0px;
+
+		.content {
+			gap: 8px;
+
+			.user_profile {
+				.user_data {
+					.user_name {
+						font-size: clamp(12px, 4vw, 8px);
+					}
+					.user_email {
+						font-size: clamp(10px, 4vw, 6px);
+					}
+				}
+			}
+
+			.auth_logout_buttons {
+				.logout_button {
+					font-size: clamp(10px, 4vw, 6px);
+				}
+			}
+		}
+	}
+
+	// Адаптив для устройств с шириной до 230px
+	@media (max-width: 230px) {
+		width: 180px;
+		top: 45px;
+		right: 0px;
+		padding: 10px;
+
+		.content {
+			gap: 5px;
+
+			.user_profile {
+				flex-direction: column;
+				gap: 5px;
+
+				.user_data {
+					.user_name {
+						font-size: clamp(10px, 4vw, 7px);
+					}
+					.user_email {
+						font-size: clamp(8px, 4vw, 5px);
+					}
+				}
+			}
+
+			.auth_login_buttons,
+			.auth_logout_buttons {
+				.sign_in_button,
+				.logout_button {
+					padding: 5px 10px;
+					font-size: clamp(10px, 4vw, 5px);
+				}
+			}
+
+			.nav {
+				ul {
+					li {
+						.link {
+							padding: 5px 10px;
+							font-size: clamp(10px, 4vw, 6px);
+						}
+					}
+				}
+			}
+		}
+	}
+}

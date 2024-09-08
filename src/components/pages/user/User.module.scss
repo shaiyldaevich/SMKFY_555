@@ -1,0 +1,333 @@
+.User {
+	.content {
+	  .header {
+		background: linear-gradient(135deg, #3d3d25, #656247);
+		padding: 32px;
+		border-radius: 10px;
+		display: flex;
+		align-items: center;
+  
+		img {
+		  border-radius: 50%;
+		  width: 200px;
+		  height: 200px;
+		  object-fit: cover;
+		}
+  
+		.head_text {
+		  display: flex;
+		  flex-direction: column;
+		  justify-content: space-evenly;
+  
+		  h2 {
+			font-size: 16px;
+		  }
+  
+		  h1 {
+			font-size: 32px;
+		  }
+  
+		  h3 {
+			font-size: 16px;
+		  }
+		}
+	  }
+  
+	  .topartists {
+		h2 {
+		  font-size: 24px;
+		  margin-block: 24px;
+		}
+  
+		.artists {
+		  display: flex;
+		  align-items: center;
+		  justify-content: space-evenly;
+  
+		  .artist_card {
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+  
+			img {
+			  border-radius: 50%;
+			}
+  
+			h3 {
+			  font-size: 16px;
+			}
+  
+			h4 {
+			  font-size: 12px;
+			}
+  
+			p {
+			  font-size: 14px;
+			}
+		  }
+		}
+	  }
+  
+	  .toptracks {
+		.tracks {
+		  display: flex;
+		  flex-direction: column;
+		  justify-content: center;
+		  gap: 10px;
+  
+		  .track_card {
+			display: flex;
+			align-items: center;
+			gap: 20px;
+			padding: 10px;
+			background-color: #181818;
+			border-radius: 8px;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+  
+			&.active {
+			  background-color: #1db954;
+			}
+		  }
+		}
+	  }
+	}
+  
+	// Адаптив для устройств с шириной от 768px до 1120px
+	@media (min-width: 768px) and (max-width: 1120px) {
+	  .content {
+		.header {
+		  padding: 24px;
+  
+		  img {
+			width: 180px;
+			height: 180px;
+		  }
+  
+		  .head_text {
+			h1 {
+			  font-size: 28px;
+			}
+  
+			h2, h3 {
+			  font-size: 14px;
+			}
+		  }
+		}
+  
+		.topartists {
+		  h2 {
+			font-size: 22px;
+		  }
+  
+		  .artists {
+			.artist_card {
+			  img {
+				width: 120px;
+				height: 120px;
+			  }
+  
+			  h3 {
+				font-size: 14px;
+			  }
+  
+			  h4 {
+				font-size: 12px;
+			  }
+			}
+		  }
+		}
+  
+		.toptracks {
+		  .tracks {
+			gap: 8px;
+  
+			.track_card {
+			  padding: 10px;
+			  gap: 16px;
+			}
+		  }
+		}
+	  }
+	}
+  
+	// Адаптив для мобильных устройств (до 768px)
+	@media (max-width: 768px) {
+	  .content {
+		.header {
+		  flex-direction: column;
+		  text-align: center;
+  
+		  img {
+			width: 150px;
+			height: 150px;
+		  }
+  
+		  .head_text {
+			h1 {
+			  font-size: 24px;
+			}
+  
+			h2, h3 {
+			  font-size: 14px;
+			}
+		  }
+		}
+  
+		.topartists {
+		  h2 {
+			font-size: 20px;
+		  }
+  
+		  .artists {
+			flex-direction: column;
+		  }
+  
+		  .artist_card {
+			margin-bottom: 20px;
+  
+			img {
+			  width: 100px;
+			  height: 100px;
+			}
+  
+			h3 {
+			  font-size: 14px;
+			}
+  
+			h4 {
+			  font-size: 10px;
+			}
+		  }
+		}
+  
+		.toptracks {
+		  .tracks {
+			gap: 8px;
+  
+			.track_card {
+			  padding: 8px;
+			  gap: 15px;
+			}
+		  }
+		}
+	  }
+	}
+  
+	// Адаптив для экранов от 300px до 480px
+	@media (min-width: 301px) and (max-width: 480px) {
+	  .content {
+		.header {
+		  padding: 20px;
+  
+		  img {
+			width: 110px;
+			height: 110px;
+		  }
+  
+		  .head_text {
+			h1 {
+			  font-size: 22px;
+			}
+  
+			h2, h3 {
+			  font-size: 12px;
+			}
+		  }
+		}
+  
+		.topartists {
+		  h2 {
+			font-size: 18px;
+		  }
+  
+		  .artists {
+			.artist_card {
+			  img {
+				width: 70px;
+				height: 70px;
+			  }
+  
+			  h3 {
+				font-size: 12px;
+			  }
+  
+			  h4 {
+				font-size: 10px;
+			  }
+			}
+		  }
+		}
+  
+		.toptracks {
+		  .tracks {
+			gap: 6px;
+  
+			.track_card {
+			  padding: 8px;
+			  gap: 12px;
+			}
+		  }
+		}
+	  }
+	}
+  
+	// Адаптив для устройств с шириной до 300px
+	@media (max-width: 300px) {
+	  .content {
+		.header {
+		  padding: 16px;
+  
+		  img {
+			width: 100px;
+			height: 100px;
+		  }
+  
+		  .head_text {
+			h1 {
+			  font-size: 18px;
+			}
+  
+			h2, h3 {
+			  font-size: 10px;
+			}
+		  }
+		}
+  
+		.topartists {
+		  h2 {
+			font-size: 16px;
+		  }
+  
+		  .artists {
+			.artist_card {
+			  img {
+				width: 60px;
+				height: 60px;
+			  }
+  
+			  h3 {
+				font-size: 10px;
+			  }
+  
+			  h4 {
+				font-size: 8px;
+			  }
+			}
+		  }
+		}
+  
+		.toptracks {
+		  .tracks {
+			gap: 4px;
+  
+			.track_card {
+			  padding: 4px;
+			  gap: 8px;
+			}
+		  }
+		}
+	  }
+	}
+  }
+  

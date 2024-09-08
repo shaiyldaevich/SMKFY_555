@@ -1,0 +1,46 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	color-scheme: dark;
+}
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+body {
+	background-color: #000;
+}
+button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	@media (max-width: 500px) {
+		cursor: default;
+	}
+}
+.container {
+	width: 100%;
+	max-width: 1920px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+::-webkit-scrollbar {
+	width: 2px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #212529;
+}
+
+::-webkit-scrollbar-thumb {
+	background: linear-gradient(to bottom, #228920, #470552);
+	border-radius: 10px;
+}
