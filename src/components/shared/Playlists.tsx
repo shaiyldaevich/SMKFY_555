@@ -4,8 +4,7 @@ import { useRouter } from 'next/navigation';
 import { useGetPlaylistsQuery } from '@/redux/api/playlist';
 import Image from 'next/image';
 import { VscLibrary } from 'react-icons/vsc';
-import { FaArrowRight, FaSearch, FaPlus } from 'react-icons/fa';
-import { TfiMenuAlt } from 'react-icons/tfi';
+
 import playImage from '../../assets/i.webp';
 import { useEffect, useState } from 'react';
 const Playlists = () => {

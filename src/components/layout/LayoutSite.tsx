@@ -7,6 +7,7 @@ import { useGetMeQuery } from '@/redux/api/me';
 import { useHeaderStore } from '@/stores/useHeaderStore';
 import Preloader from '../ui/preLoader/Loading';
 import Playlists from '../shared/Playlists';
+// import Artist from '../shared/Artist';
 
 interface LayoutSiteProps {
 	children: ReactNode;
@@ -43,6 +44,7 @@ const LayoutSite: FC<LayoutSiteProps> = ({ children }) => {
 						<div className={scss.content}>
 							<Playlists />
 							<main>{children}</main>
+							{/* <Artist/> */}
 						</div>
 						<Footer />
 					</div>

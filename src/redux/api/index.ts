@@ -35,6 +35,6 @@ export const api = createApi({
 	baseQuery: baseQueryExtended,
 	refetchOnFocus: true,
 	refetchOnReconnect: true,
-	tagTypes: ['me', 'search', 'playlist','profile','userTopTrack','userTopArtists'],
+	tagTypes: ['me', 'search', 'playlist','profile','userTopTrack','userTopArtists','artist'],
 	endpoints: () => ({})
 });
