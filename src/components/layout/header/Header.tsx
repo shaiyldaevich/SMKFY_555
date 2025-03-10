@@ -24,7 +24,8 @@ const Header = () => {
 			window.removeEventListener('resize', handleResize);
 		};
 	}, []);
-
+	
+	
 	return (
 		<header className={scss.Header}>
 			<div className="container">
@@ -52,7 +53,7 @@ const Header = () => {
 									</>
 								) : (
 									<>
-										<button onClick={login}>login</button>
+										<button onClick={login}>login </button>
 									</>
 								)}
 							</>
